@@ -21,7 +21,7 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo-section">
-                    <img src="https://via.placeholder.com/50x50/00ff88/000000?text=CT" alt="CogniTron Logo" class="logo">
+                    <img src="/assets/logo.png" alt="CogniTron Logo" class="logo">
                     <span class="company-name">CogniTron</span>
                 </div>
                 <div class="nav-links">
@@ -79,13 +79,11 @@
                     <p>We harness cutting-edge AI to fundamentally transform manufacturing, breaking free from legacy constraints that have bound physical industries for decades.</p>
                 </div>
                 
-                <div class="vision-video-placeholder">
-                    <img src="https://via.placeholder.com/600x400/1a1a1a/00ff88?text=Vision+Video" alt="Vision Video">
-                    <div class="play-button">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </div>
+                <div class="vision-video-container">
+                    <video autoplay loop muted playsinline>
+                        <source src="/assets/vision-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 
                 <div class="vision-card" data-card>
@@ -208,8 +206,6 @@
             </div>
             
             <div class="principles-timeline">
-                <div class="timeline-line"></div>
-                
                 <div class="principle-item" data-card>
                     <div class="principle-number">1</div>
                     <div class="principle-content">
@@ -394,7 +390,7 @@
             <div class="team-grid">
                 <div class="team-member" data-card>
                     <div class="member-image">
-                        <img src="https://via.placeholder.com/300x300/1a1a1a/00ff88?text=KB" alt="Koushik Balasubramanian">
+                        <img src="assets/avatars/person1.png" alt="Koushik Balasubramanian">
                         <div class="member-overlay"></div>
                     </div>
                     <div class="member-info">
@@ -406,13 +402,25 @@
                 
                 <div class="team-member" data-card>
                     <div class="member-image">
-                        <img src="https://via.placeholder.com/300x300/1a1a1a/00ff88?text=SA" alt="Shahzad Ansari">
+                        <img src="assets/avatars/person2.jpg" alt="Shahzad Ansari">
                         <div class="member-overlay"></div>
                     </div>
                     <div class="member-info">
                         <h3>Shahzad Ansari</h3>
                         <p class="member-role">Founding Engineer</p>
                         <p class="member-bio">Self-Study, Physical AI</p>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-card>
+                    <div class="member-image">
+                        <img src="assets/avatars/person3.jpg" alt="Nishank Thakur">
+                        <div class="member-overlay"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Nishank Thakur</h3>
+                        <p class="member-role">Founding Engineer</p>
+                        <p class="member-bio">Simulation and 3D Graphics</p>
                     </div>
                 </div>
             </div>
@@ -476,7 +484,7 @@
     <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <img src="https://via.placeholder.com/60x60/00ff88/000000?text=CT" alt="CogniTron Logo" class="footer-logo">
+                <img src="assets/logo.png" alt="CogniTron Logo" class="footer-logo">
                 <h3>CogniTron</h3>
                 <p class="footer-tagline">Manufacturing the Future</p>
             </div>
