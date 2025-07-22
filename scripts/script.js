@@ -119,56 +119,84 @@ document.querySelectorAll('[data-scroll]').forEach(section => {
     scrollObserver.observe(section);
 });
 
-// Mouse Glow Effect for Cards
-const cards = document.querySelectorAll('[data-card]');
-const mouseGlowRadius = 200;
+// Global Mouse Glow Effect for Card Borders
+let globalMouseX = 0;
+let globalMouseY = 0;
+const influenceRadius = 800; // Pixels - radius of cursor influence
 
-cards.forEach(card => {
-    // Create glow element
-    const glowEl = document.createElement('div');
-    glowEl.className = 'glow-element';
-    Object.assign(glowEl.style, {
-        position: 'absolute',
-        width: `${mouseGlowRadius * 2}px`,
-        height: `${mouseGlowRadius * 2}px`,
-        background: 'radial-gradient(circle, rgba(0, 255, 136, 0.4) 0%, transparent 70%)',
-        borderRadius: '50%',
-        pointerEvents: 'none',
-        opacity: '0',
-        transition: 'opacity 0.3s ease',
-        zIndex: '-1',
-        transform: 'translate(-50%, -50%)'
-    });
-    card.appendChild(glowEl);
+function initializeGlobalCardBorderGlow() {
+    const cards = document.querySelectorAll('[data-card], .stat-item, .coming-soon, .position-card, .challenge-card, .grid-line');
     
-    // Mouse move handler
-    card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+    // Global mouse move handler
+    document.addEventListener('mousemove', (e) => {
+        globalMouseX = e.clientX;
+        globalMouseY = e.clientY;
         
-        glowEl.style.left = `${x}px`;
-        glowEl.style.top = `${y}px`;
-        glowEl.style.opacity = '1';
-        
-        // Update card border gradient
-        const angle = Math.atan2(y - rect.height / 2, x - rect.width / 2) * 180 / Math.PI;
-        card.style.background = `
-            linear-gradient(${angle + 90}deg, 
-                transparent 0%, 
-                rgba(0, 255, 136, 0.1) 50%, 
-                transparent 100%),
-            linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%)
-        `;
-        card.style.border = '1px solid rgba(0, 255, 136, 0.3)';
+        // Update all cards based on global mouse position
+        updateCardGlows();
     });
     
-    card.addEventListener('mouseleave', () => {
-        glowEl.style.opacity = '0';
-        card.style.background = '';
-        card.style.border = '1px solid transparent';
-    });
-});
+    function updateCardGlows() {
+        cards.forEach(card => {
+            // Skip if not visible or already processed
+            if (card.dataset.glowInitialized !== 'true') {
+                initializeCard(card);
+            }
+            
+            const rect = card.getBoundingClientRect();
+            const cardCenterX = rect.left + rect.width / 2;
+            const cardCenterY = rect.top + rect.height / 2;
+            
+            // Calculate distance from mouse to card center
+            const distance = Math.sqrt(
+                Math.pow(globalMouseX - cardCenterX, 2) + 
+                Math.pow(globalMouseY - cardCenterY, 2)
+            );
+            
+            // Calculate influence based on distance (closer = stronger)
+            const influence = Math.max(0, 1 - (distance / influenceRadius));
+            
+            if (influence > 0) {
+                // Calculate relative position of mouse to card
+                const relativeX = globalMouseX - rect.left;
+                const relativeY = globalMouseY - rect.top;
+                
+                // Convert to percentages (can go beyond 0-100% for external influence)
+                const xPercent = (relativeX / rect.width) * 100;
+                const yPercent = (relativeY / rect.height) * 100;
+                
+                // Apply gradient border using CSS custom properties
+                card.style.setProperty('--mouse-x', `${xPercent}%`);
+                card.style.setProperty('--mouse-y', `${yPercent}%`);
+                card.style.setProperty('--border-opacity', influence.toString());
+                card.style.setProperty('--glow-intensity', influence.toString());
+            } else {
+                // Fade out the border glow when too far
+                card.style.setProperty('--border-opacity', '0');
+                card.style.setProperty('--glow-intensity', '0');
+            }
+        });
+    }
+    
+    function initializeCard(card) {
+        card.dataset.glowInitialized = 'true';
+        
+        // Initialize CSS variables
+        card.style.setProperty('--mouse-x', '50%');
+        card.style.setProperty('--mouse-y', '50%');
+        card.style.setProperty('--border-opacity', '0');
+        card.style.setProperty('--glow-intensity', '0');
+    }
+    
+    // Initialize all cards
+    cards.forEach(initializeCard);
+}
+
+// Initialize on page load
+initializeGlobalCardBorderGlow();
+
+// Re-initialize when DOM content is loaded (for other pages)
+document.addEventListener('DOMContentLoaded', initializeGlobalCardBorderGlow);
 
 // Header Scroll Effect
 let lastScroll = 0;

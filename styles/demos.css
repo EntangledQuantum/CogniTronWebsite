@@ -122,14 +122,38 @@
     padding: 30px;
     background: var(--gradient-2);
     border-radius: 15px;
-    border: 1px solid rgba(0, 255, 136, 0.2);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    isolation: isolate;
+}
+
+.stat-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    padding: 2px;
+    background: radial-gradient(
+        calc(500px * var(--glow-intensity, 0.8)) circle at var(--mouse-x) var(--mouse-y),
+        rgba(0, 255, 136, calc(1.2 * var(--glow-intensity, 0))) 0%,
+        rgba(0, 204, 255, calc(0.8 * var(--glow-intensity, 0))) 20%,
+        rgba(255, 255, 255, calc(0.3 * var(--glow-intensity, 0))) 35%,
+        rgba(0, 255, 136, calc(0.2 * var(--glow-intensity, 0))) 50%,
+        transparent 70%
+    );
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: var(--border-opacity, 0);
+    transition: opacity 0.1s ease;
+    pointer-events: none;
 }
 
 .stat-item:hover {
     transform: translateY(-5px);
-    border-color: var(--primary-color);
-    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .stat-value {
@@ -153,8 +177,33 @@
     padding: 80px 40px;
     background: var(--gradient-2);
     border-radius: 20px;
-    border: 1px solid rgba(0, 255, 136, 0.2);
     margin-top: 80px;
+    position: relative;
+    isolation: isolate;
+}
+
+.coming-soon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: radial-gradient(
+        calc(600px * var(--glow-intensity, 0.8)) circle at var(--mouse-x) var(--mouse-y),
+        rgba(0, 255, 136, calc(1.2 * var(--glow-intensity, 0))) 0%,
+        rgba(0, 204, 255, calc(0.8 * var(--glow-intensity, 0))) 20%,
+        rgba(255, 255, 255, calc(0.3 * var(--glow-intensity, 0))) 35%,
+        rgba(0, 255, 136, calc(0.2 * var(--glow-intensity, 0))) 50%,
+        transparent 70%
+    );
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: var(--border-opacity, 0);
+    transition: opacity 0.1s ease;
+    pointer-events: none;
 }
 
 .coming-soon h2 {

@@ -90,12 +90,38 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    isolation: isolate;
+}
+
+.position-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: radial-gradient(
+        calc(600px * var(--glow-intensity, 0.8)) circle at var(--mouse-x) var(--mouse-y),
+        rgba(0, 255, 136, calc(1.2 * var(--glow-intensity, 0))) 0%,
+        rgba(0, 204, 255, calc(0.8 * var(--glow-intensity, 0))) 20%,
+        rgba(255, 255, 255, calc(0.3 * var(--glow-intensity, 0))) 35%,
+        rgba(0, 255, 136, calc(0.2 * var(--glow-intensity, 0))) 50%,
+        transparent 70%
+    );
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: var(--border-opacity, 0);
+    transition: opacity 0.1s ease;
+    pointer-events: none;
 }
 
 .position-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .position-header {
