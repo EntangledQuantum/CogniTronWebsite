@@ -330,8 +330,9 @@ body {
     gap: 10px;
     opacity: 0;
     animation: fadeInUp 1s ease 1s forwards;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     z-index: 10;
+    pointer-events: auto;
 }
 
 .mouse {
@@ -362,6 +363,12 @@ body {
 .scroll-indicator span {
     color: var(--text-secondary);
     font-size: 0.9rem;
+}
+
+/* Hide scroll indicator completely when scrolled */
+.scroll-indicator[style*="opacity: 0"] {
+    pointer-events: none !important;
+    visibility: hidden !important;
 }
 
 /* Section Styles */

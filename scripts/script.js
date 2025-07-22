@@ -349,7 +349,23 @@ document.addEventListener('DOMContentLoaded', () => {
     if (scrollIndicator) {
         setTimeout(() => {
             scrollIndicator.style.animation = 'none';
+            // Check if already scrolled and hide immediately
+            if (window.scrollY > 50) {
+                scrollIndicator.style.opacity = '0';
+                scrollIndicator.style.visibility = 'hidden';
+                scrollIndicator.style.pointerEvents = 'none';
+                scrollIndicator.style.transform = 'translateX(-50%) translateY(20px)';
+            }
         }, 2000); // After animation completes
+    }
+    
+    // Also check on initial load if page is already scrolled
+    if (window.scrollY > 50 && scrollIndicator) {
+        scrollIndicator.style.animation = 'none';
+        scrollIndicator.style.opacity = '0';
+        scrollIndicator.style.visibility = 'hidden';
+        scrollIndicator.style.pointerEvents = 'none';
+        scrollIndicator.style.transform = 'translateX(-50%) translateY(20px)';
     }
 });
 
