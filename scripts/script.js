@@ -343,15 +343,51 @@ document.addEventListener('DOMContentLoaded', () => {
     heroElements.forEach((el, index) => {
         el.style.animationDelay = `${index * 0.2}s`;
     });
+    
+    // Remove animation from scroll indicator after it completes
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+        setTimeout(() => {
+            scrollIndicator.style.animation = 'none';
+        }, 2000); // After animation completes
+    }
 });
 
 // Parallax Effect for Hero Section
 window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
-    const heroContent = document.querySelector('.hero-content');
-    if (heroContent && scrolled < window.innerHeight) {
-        heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-        heroContent.style.opacity = 1 - (scrolled / window.innerHeight);
+    const heroTitle = document.querySelector('.hero-title');
+    const heroTagline = document.querySelector('.hero-tagline');
+    const ctaButton = document.querySelector('.hero-content .cta-button');
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    
+    if (scrolled < window.innerHeight) {
+        // Apply parallax to title, tagline, and button
+        if (heroTitle) {
+            heroTitle.style.transform = `translateY(${scrolled * 0.5}px)`;
+            heroTitle.style.opacity = 1 - (scrolled / window.innerHeight);
+        }
+        if (heroTagline) {
+            heroTagline.style.transform = `translateY(${scrolled * 0.4}px)`;
+            heroTagline.style.opacity = 1 - (scrolled / window.innerHeight);
+        }
+        if (ctaButton) {
+            ctaButton.style.transform = `translateY(${scrolled * 0.3}px)`;
+            ctaButton.style.opacity = 1 - (scrolled / window.innerHeight);
+        }
+        
+        // Hide scroll indicator quickly when scrolling starts
+        if (scrollIndicator && scrolled > 50) {
+            scrollIndicator.style.opacity = '0';
+            scrollIndicator.style.visibility = 'hidden';
+            scrollIndicator.style.pointerEvents = 'none';
+            scrollIndicator.style.transform = 'translateX(-50%) translateY(20px)';
+        } else if (scrollIndicator && scrolled <= 50) {
+            scrollIndicator.style.opacity = '1';
+            scrollIndicator.style.visibility = 'visible';
+            scrollIndicator.style.pointerEvents = 'auto';
+            scrollIndicator.style.transform = 'translateX(-50%) translateY(0)';
+        }
     }
 });
 
