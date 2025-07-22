@@ -1,0 +1,311 @@
+/* About Page Specific Styles */
+
+/* Vision Section */
+.about-vision {
+    padding: 80px 0;
+}
+
+.vision-statement {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.vision-item {
+    text-align: center;
+    padding: 40px 30px;
+}
+
+.vision-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px;
+    color: var(--primary-color);
+    animation: float 3s ease-in-out infinite;
+}
+
+.vision-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Why Exist Section */
+.why-exist {
+    padding: 80px 0;
+    background: var(--gradient-2);
+}
+
+.exist-main {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.exist-main p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.exist-challenges h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.challenge-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.challenge-card {
+    padding: 40px;
+    background: var(--bg-primary);
+    border-radius: 15px;
+}
+
+.challenge-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* Technology Section */
+.technology {
+    padding: 80px 0;
+}
+
+.tech-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-top: 60px;
+}
+
+.tech-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.tech-item.reverse {
+    grid-template-columns: 1fr 1fr;
+}
+
+.tech-item.reverse .tech-visual {
+    order: 2;
+}
+
+.tech-item.reverse .tech-info {
+    order: 1;
+}
+
+.tech-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.tech-info h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.tech-info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+/* Tech Animations */
+.tech-animation {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.orbit {
+    position: absolute;
+    border: 2px solid rgba(0, 255, 136, 0.3);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orbit-1 {
+    width: 100px;
+    height: 100px;
+    animation: rotate 3s linear infinite;
+}
+
+.orbit-2 {
+    width: 200px;
+    height: 200px;
+    animation: rotate 5s linear infinite reverse;
+}
+
+.orbit-3 {
+    width: 300px;
+    height: 300px;
+    animation: rotate 7s linear infinite;
+}
+
+.core {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-1);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 40px rgba(0, 255, 136, 0.8);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Grid Animation */
+.grid-animation {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid-line {
+    background: var(--gradient-2);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-line::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgba(0, 255, 136, 0.4), transparent);
+    animation: scan 3s linear infinite;
+}
+
+.grid-line:nth-child(2)::before { animation-delay: 0.5s; }
+.grid-line:nth-child(3)::before { animation-delay: 1s; }
+.grid-line:nth-child(4)::before { animation-delay: 1.5s; }
+
+@keyframes scan {
+    from { top: -100%; }
+    to { top: 100%; }
+}
+
+/* Future Section */
+.future-vision {
+    padding: 80px 0;
+    background: radial-gradient(ellipse at center, rgba(0, 255, 136, 0.1) 0%, transparent 50%);
+}
+
+.future-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.future-item {
+    text-align: center;
+    padding: 40px;
+    position: relative;
+}
+
+.future-year {
+    display: block;
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(0, 255, 136, 0.2);
+    margin-bottom: 20px;
+}
+
+.future-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.future-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .tech-item,
+    .tech-item.reverse {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .tech-item.reverse .tech-visual,
+    .tech-item.reverse .tech-info {
+        order: unset;
+    }
+    
+    .tech-visual {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vision-statement {
+        font-size: 1.2rem;
+    }
+    
+    .exist-main p {
+        font-size: 1rem;
+    }
+    
+    .tech-animation,
+    .grid-animation {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .orbit-1 { width: 60px; height: 60px; }
+    .orbit-2 { width: 120px; height: 120px; }
+    .orbit-3 { width: 200px; height: 200px; }
+    
+    .future-year {
+        font-size: 2rem;
+    }
+} 
