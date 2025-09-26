@@ -201,7 +201,7 @@
             
             <div class="footer-contact">
                 <h4>Get in Touch</h4>
-                <p>New York, USA</p>
+                <p>Milpitas, CA , USA</p>
                 <button class="contact-footer-btn">Contact Us</button>
             </div>
             
@@ -210,6 +210,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- Contact Modal -->
+    <div class="contact-modal" id="contactModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Contact Us</h2>
+            <form class="contact-form" id="contactForm" method="POST">
+                <input type="hidden" name="access_key" value="b06ea6fa-bff0-42be-85ce-6d86024d32fa">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="../scripts/script.js"></script>
