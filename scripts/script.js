@@ -242,27 +242,68 @@ window.addEventListener('click', (e) => {
 
 // Contact Form Submission
 const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
+const result = document.createElement('div');
+result.id = 'result';
+result.style.display = 'none';
+result.style.textAlign = 'center';
+result.style.marginTop = '20px';
+result.style.padding = '10px';
+result.style.borderRadius = '5px';
+result.style.fontSize = '14px';
+
+contactForm.addEventListener('submit', function(e) {
     const formData = new FormData(contactForm);
-    const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        subject: formData.get('subject'),
-        message: formData.get('message')
-    };
+    e.preventDefault();
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    // Insert result div if not already present
+    if (!document.getElementById('result')) {
+        contactForm.appendChild(result);
+    }
     
-    // Here you would normally send the data to your server
-    // For now, we'll just log it and show a success message
-    console.log('Form data:', data);
-    
-    // Show success message
-    alert('Thank you for your message! We will get back to you soon.');
-    contactForm.reset();
-    contactModal.style.display = 'none';
-    document.body.style.overflow = '';
+    result.style.display = 'block';
+    result.style.backgroundColor = 'rgba(0, 255, 136, 0.1)';
+    result.style.color = 'var(--primary-color)';
+    result.innerHTML = "Please wait...";
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.style.backgroundColor = 'rgba(0, 255, 136, 0.2)';
+                result.innerHTML = "Thank you for your message! We will get back to you soon.";
+                setTimeout(() => {
+                    contactModal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }, 2000);
+            } else {
+                console.log(response);
+                result.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
+                result.style.color = '#ff4444';
+                result.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
+            result.style.color = '#ff4444';
+            result.innerHTML = "Something went wrong!";
+        })
+        .then(function() {
+            contactForm.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        });
 });
 
 // Smooth Scrolling for Navigation
@@ -461,15 +502,3 @@ window.addEventListener('scroll', () => {
         // Scroll-based animations here
     }, 10);
 });
-
-// Add form field names
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contactForm');
-    if (form) {
-        const inputs = form.querySelectorAll('input, textarea');
-        inputs[0].setAttribute('name', 'name');
-        inputs[1].setAttribute('name', 'email');
-        inputs[2].setAttribute('name', 'subject');
-        inputs[3].setAttribute('name', 'message');
-    }
-}); 
