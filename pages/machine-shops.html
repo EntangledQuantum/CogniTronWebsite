@@ -42,21 +42,119 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="page-hero">
-        <div class="hero-content">
-            <h1 class="page-title glitch" data-text="Machine Shops">Machine Shops</h1>
-            <p class="page-subtitle">Revolutionizing Traditional Manufacturing</p>
+    <section class="machine-shop-hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1 class="hero-title glitch" data-text="The Machine Shop">The Machine Shop</h1>
+                    <p class="hero-tagline">From Digital Blueprint to Physical Reality.</p>
+                </div>
+                <div class="hero-video">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/ozHTDo-vmtg" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Content will be added later -->
-    <section class="content-placeholder" data-scroll>
+    <!-- Solutions Section -->
+    <section class="solutions-section" data-scroll>
         <div class="container">
-            <div class="placeholder-content">
-                <h2 class="section-title">Coming Soon</h2>
-                <p class="placeholder-text">
-                    This page is under development. We're working on bringing you detailed information about how CogniTron is transforming machine shops with AI-powered robotics.
-                </p>
+            <div class="section-header">
+                <h2 class="section-title">Our Solutions</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="solution-features">
+                <div class="feature-card" data-card>
+                    <div class="feature-number">01</div>
+                    <h3>Virtual Commissioning & Prototyping</h3>
+                    <p>Build, test, and validate your entire robotic workcell in a high-fidelity digital twin before a single piece of hardware is ordered. Eliminate costly crashes, reduce integration time from months to weeks, and deploy with confidence knowing your process is already optimized for success.</p>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 8L40 8L40 32L8 32Z" stroke="currentColor" stroke-width="3" fill="none"/>
+                            <path d="M12 16L36 16" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 20L28 20" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 24L32 24" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="40" r="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 36L24 32" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="feature-card" data-card>
+                    <div class="feature-number">02</div>
+                    <h3>AI-Powered Skill Generation</h3>
+                    <p>Move beyond brittle, point-to-point programming. Leverage our physics-based AI to generate robust, adaptive skills for complex tasks like deburring, welding, and assembly. Turn your process intent and CAD files into production-ready robot behaviors that automatically adjust to part variations.</p>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4C30 4 36 8 40 14C36 20 30 24 24 24C18 24 12 20 8 14C12 8 18 4 24 4Z" stroke="currentColor" stroke-width="3"/>
+                            <path d="M24 24C30 24 36 28 40 34C36 40 30 44 24 44C18 44 12 40 8 34C12 28 18 24 24 24Z" stroke="currentColor" stroke-width="3"/>
+                            <circle cx="24" cy="14" r="4" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="34" r="4" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="feature-card" data-card>
+                    <div class="feature-number">03</div>
+                    <h3>Production Monitoring & Optimization</h3>
+                    <p>Connect your physical workcell to its digital twin for live performance monitoring. Our system automatically detects anomalies, predicts failures before they happen, and provides clear, actionable diagnostics to your operators. Continuously refine and improve your process with real-world data.</p>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 36L16 28L24 32L32 20L40 24" stroke="currentColor" stroke-width="3" fill="none"/>
+                            <rect x="4" y="8" width="40" height="32" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <circle cx="16" cy="28" r="2" fill="currentColor"/>
+                            <circle cx="24" cy="32" r="2" fill="currentColor"/>
+                            <circle cx="32" cy="20" r="2" fill="currentColor"/>
+                            <circle cx="40" cy="24" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Capabilities Section -->
+    <section class="capabilities-section" data-scroll>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Core Capabilities</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="capabilities-grid">
+                <div class="capability-card" data-card>
+                    <div class="capability-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4L4 14V34L24 44L44 34V14L24 4Z" stroke="currentColor" stroke-width="3"/>
+                            <path d="M24 24L44 14" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 24V44" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 24L4 14" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>High-Fidelity Physics Engine</h3>
+                    <p>At the heart of our machine shop is a cutting-edge, differentiable physics engine. It accurately models complex contact mechanics, material properties, and thermal dynamics, ensuring that what you see in simulation is what you get on the factory floor. This is sim-to-real you can trust.</p>
+                </div>
+                
+                <div class="capability-card" data-card>
+                    <div class="capability-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="8" width="12" height="12" stroke="currentColor" stroke-width="3" fill="none"/>
+                            <rect x="28" y="8" width="12" height="12" stroke="currentColor" stroke-width="3" fill="none"/>
+                            <rect x="8" y="28" width="12" height="12" stroke="currentColor" stroke-width="3" fill="none"/>
+                            <rect x="28" y="28" width="12" height="12" stroke="currentColor" stroke-width="3" fill="none"/>
+                            <path d="M20 14L28 14" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 20L14 28" stroke="currentColor" stroke-width="2"/>
+                            <path d="M34 20L34 28" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 34L28 34" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Composable Skill Registry</h3>
+                    <p>Access a library of pre-verified, production-tested robotic skills that can be composed like building blocks. From force-sensitive insertion to precision path-following, our skill registry accelerates development and guarantees repeatable, high-quality execution for your most demanding tasks.</p>
+                </div>
             </div>
         </div>
     </section>
