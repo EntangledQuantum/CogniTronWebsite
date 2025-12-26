@@ -1,0 +1,335 @@
+/* Digital Guardian Page Specific Styles */
+
+/* Hero Section */
+.digital-guardian-hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    /* background: radial-gradient(ellipse at center, rgba(0, 204, 255, 0.1) 0%, transparent 50%); Removed for transparency */
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    margin-bottom: 60px;
+}
+
+.hero-title {
+    font-family: var(--font-primary);
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-family: var(--font-primary);
+}
+
+.hero-tagline {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.5s forwards;
+}
+
+/* 3 Core Pillars Section */
+.pillars-section {
+    padding: 100px 0;
+    position: relative;
+    /* background: var(--bg-secondary); Removed */
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.pillar-card {
+    position: relative;
+    background: var(--bg-primary);
+    border-radius: 20px;
+    padding: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pillar-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 204, 255, 0.2);
+    border-color: var(--secondary-color);
+}
+
+.pillar-number {
+    font-family: var(--font-primary);
+    font-size: 4rem;
+    font-weight: 900;
+    color: rgba(0, 204, 255, 0.1);
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.pillar-card h3 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    padding-right: 40px;
+}
+
+.pillar-content strong {
+    color: var(--text-primary);
+}
+
+.example-box {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(0, 255, 136, 0.05);
+    border-left: 3px solid var(--primary-color);
+    border-radius: 0 10px 10px 0;
+}
+
+.example-box h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.example-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.example-box li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.example-box li:last-child {
+    margin-bottom: 0;
+}
+
+/* Crisis Section */
+.crisis-section {
+    padding: 100px 0;
+    /* background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%); Removed */
+}
+
+.crisis-table-container {
+    overflow-x: auto;
+    margin-top: 60px;
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.crisis-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.crisis-table th,
+.crisis-table td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.crisis-table th {
+    font-family: var(--font-primary);
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.crisis-table tr:last-child td {
+    border-bottom: none;
+}
+
+.metric-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.metric-context {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Limitations Section */
+.limitations-section {
+    padding: 100px 0;
+    /* background: var(--bg-primary); Removed */
+}
+
+.limitations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.limitation-card {
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 50, 50, 0.05);
+    /* Reddish tint for bad things */
+    border: 1px solid rgba(255, 50, 50, 0.1);
+}
+
+.limitation-card h3 {
+    color: #ff5555;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.limitation-card p {
+    color: var(--text-secondary);
+}
+
+.legacy-comparison {
+    margin-top: 60px;
+    padding: 40px;
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.legacy-comparison p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+/* Value Proposition Section */
+.value-prop-section {
+    padding: 100px 0;
+    /* background: var(--bg-secondary); Removed */
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+.value-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    background: var(--bg-primary);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 255, 136, 0.1);
+}
+
+.value-item:nth-child(even) {
+    direction: rtl;
+    /* Flip layout */
+}
+
+.value-item:nth-child(even) .value-content {
+    direction: ltr;
+    /* Reset text direction */
+}
+
+.value-content h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.value-content p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.scenario-box {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.scenario-box .label {
+    color: var(--secondary-color);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.value-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color);
+}
+
+.value-icon svg {
+    width: 200px;
+    height: 200px;
+    opacity: 0.8;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+    .value-item,
+    .value-item:nth-child(even) {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        text-align: left;
+    }
+
+    .value-icon svg {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .pillar-number {
+        font-size: 3rem;
+    }
+}
