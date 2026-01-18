@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra-Sim - Simulation Platform for Autonomous Earth Moving | CogniTron</title>
+    <meta name="description"
+        content="Terra-Sim: Next-generation physics simulation platform for autonomous construction and earth-moving vehicles. Train AI in high-fidelity virtual environments.">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/terra-sim.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo-section">
+                    <a href="../index.html">
+                        <img src="../assets/logo.png" alt="CogniTron Logo" class="logo">
+                        <span class="company-name">CogniTron</span>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <div class="nav-item industries-dropdown">
+                        <span>Solutions</span>
+                        <div class="dropdown-content">
+                            <a href="digital-guardian.html" class="dropdown-item">Digital Guardian</a>
+                            <a href="terra-sim.html" class="dropdown-item active">Terra-Sim</a>
+                            <a href="machine-shops.html" class="dropdown-item">Machine Shops</a>
+                        </div>
+                    </div>
+                    <a href="demos.html" class="nav-item">Demos</a>
+                    <a href="careers.html" class="nav-item">Careers</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="terra-sim-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title glitch" data-text="Terra-Sim">Terra-Sim</h1>
+                <h2 class="hero-subtitle">The Generative Simulation Platform</h2>
+                <p class="hero-tagline">"Bridging the Reality Gap for Autonomous Earth Moving"</p>
+                <button class="cta-button contact-btn">
+                    <span>Contact Us</span>
+                    <div class="button-glow"></div>
+                </button>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll Down</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Auto-Building AI Models -->
+    <section class="pipeline-section" data-scroll>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Auto-Building AI Models</h2>
+                <p class="section-subtitle">The AI Factory: From CAD to Trained Policy</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <p
+                style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--text-secondary); font-size: 1.1rem;">
+                Terra-Sim transforms high-fidelity digital environments into "AI Factories" where autonomous systems
+                learn through synthetic data generation and differentiable physics—without manual data collection.
+            </p>
+
+            <!-- Pipeline Steps -->
+            <div class="pipeline-visual">
+                <div class="pipeline-step">
+                    <div class="step-number">1</div>
+                    <h4>CAD & Requirements</h4>
+                    <p>Input vehicle models and operational specs</p>
+                </div>
+                <span class="pipeline-arrow">→</span>
+                <div class="pipeline-step">
+                    <div class="step-number">2</div>
+                    <h4>World Generation</h4>
+                    <p>AI imagines infinite site variations</p>
+                </div>
+                <span class="pipeline-arrow">→</span>
+                <div class="pipeline-step">
+                    <div class="step-number">3</div>
+                    <h4>Physics-Based Worlds</h4>
+                    <p>Photorealistic environments with real physics</p>
+                </div>
+                <span class="pipeline-arrow">→</span>
+                <div class="pipeline-step">
+                    <div class="step-number">4</div>
+                    <h4>Auto-Annotation</h4>
+                    <p>Perfect labels without human input</p>
+                </div>
+                <span class="pipeline-arrow">→</span>
+                <div class="pipeline-step">
+                    <div class="step-number">5</div>
+                    <h4>Trained Policy</h4>
+                    <p>Deploy-ready AI in hours</p>
+                </div>
+            </div>
+
+            <div class="pipeline-image">
+                <img src="../assets/terra-sim/ai-factory-pipeline.jpeg" alt="AI Factory Pipeline Visualization">
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="feature-cards-grid">
+                <div class="terra-feature-card" data-card>
+                    <h4>Generative Scene Creation</h4>
+                    <p>World models generate infinite photorealistic variations of weather, lighting, terrain
+                        conditions, and site hazards—creating training data that would take years to collect manually.
+                    </p>
+                </div>
+                <div class="terra-feature-card" data-card>
+                    <h4>PhysReal Transfer</h4>
+                    <p>Transform simplified simulations into photorealistic video. Turn a basic sunny scenario into
+                        muddy, rainy night conditions—ensuring your perception stack handles any environment.</p>
+                </div>
+                <div class="terra-feature-card" data-card>
+                    <h4>Gradient-Based Learning</h4>
+                    <p>Unlike trial-and-error, our differentiable physics provides exact gradients telling AI how to
+                        optimize. Learn "haptic" digging strategies—feeling soil resistance to optimize bucket angles.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pipeline-image" style="margin-top: 60px;">
+                <img src="../assets/terra-sim/synthetic-data.jpeg"
+                    alt="Synthetic Data Generation - Multiple Environment Variations">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: CI/CD Deployment -->
+    <section class="cicd-section" data-scroll>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Simulation-First CI/CD</h2>
+                <p class="section-subtitle">The Release Confidence Engine</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <p
+                style="text-align: center; max-width: 900px; margin: 0 auto 40px; color: var(--text-secondary); font-size: 1.1rem;">
+                Every code change is validated against thousands of virtual edge cases before touching physical
+                hardware. Deploy to simulation first, test in countless unique scenarios with real physics, then
+                confidently release to the field.
+            </p>
+
+            <div class="cicd-image">
+                <img src="../assets/terra-sim/cicd-pipeline.jpeg" alt="CI/CD Pipeline for Physical AI">
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card" data-card>
+                    <span class="stat-value">10,000+</span>
+                    <span class="stat-label">Edge Cases Tested Per Build</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">60%</span>
+                    <span class="stat-label">Reduced Testing Costs</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">24hr</span>
+                    <span class="stat-label">Model Retrain Cycle</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">99%</span>
+                    <span class="stat-label">Bugs Caught in Sim</span>
+                </div>
+            </div>
+
+            <!-- Benefits List -->
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Deploy to Simulation First</h4>
+                        <p>Test any code change in a physics-accurate virtual environment before it ever reaches
+                            physical assets. No risk of damaging expensive machinery.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Infinite Scenario Testing</h4>
+                        <p>Automatically generate unique situations—weather variations, terrain changes, sensor
+                            failures, sudden obstacles—that would be impossible to stage in reality.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Safety Certification</h4>
+                        <p>Generate the artifacts and logs required for ISO 19014 functional safety certification
+                            automatically. Simulation as a legal compliance asset.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Active Learning Loop</h4>
+                        <p>When real-world anomalies occur, recreate them in simulation, generate thousands of
+                            variations, and retrain models within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Sensor Simulation -->
+    <section class="sensor-section" data-scroll>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hostile Environment Sensors</h2>
+                <p class="section-subtitle">Because Real Construction Sites Are Dirty</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <p
+                style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--text-secondary); font-size: 1.1rem;">
+                Clean-air simulations create brittle vision models. Terra-Sim models the chaotic, particulate-dense
+                environments of construction sites where standard sensors fail.
+            </p>
+
+            <div class="sensor-full-image">
+                <img src="../assets/terra-sim/sensor-degradation.jpeg"
+                    alt="Sensor Degradation Comparison - Clean vs Hostile Environment">
+            </div>
+
+            <!-- Sensor Features Grid -->
+            <div class="sensor-features">
+                <div class="sensor-feature" data-card>
+                    <h4>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                        </svg>
+                        Volumetric Dust & Fog
+                    </h4>
+                    <p>Physics-based Mie scattering simulates lidar backscatter from dust clouds and signal attenuation
+                        in fog or rain conditions.</p>
+                </div>
+                <div class="sensor-feature" data-card>
+                    <h4>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                        Camera Lens Soiling
+                    </h4>
+                    <p>Model physical degradation like mud splatter on lenses. Test "Sensor Health" monitoring and
+                        automated cleaning protocols.</p>
+                </div>
+                <div class="sensor-feature" data-card>
+                    <h4>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                        </svg>
+                        Rain & Snow Effects
+                    </h4>
+                    <p>Simulate precipitation impact on all sensor types—camera occlusion, lidar noise, and GPS signal
+                        degradation.</p>
+                </div>
+                <div class="sensor-feature" data-card>
+                    <h4>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                        RTX Lidar Physics
+                    </h4>
+                    <p>Path-traced lidar simulation captures true photon physics—beam divergence, multi-path
+                        reflections, and material-specific returns.</p>
+                </div>
+            </div>
+
+            <div class="sensor-full-image" style="margin-top: 60px;">
+                <img src="../assets/terra-sim/lidar-dust.jpeg" alt="Lidar Laser Beams Interacting with Dust Cloud">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Multi-Agent RL -->
+    <section class="multiagent-section" data-scroll>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Multi-Agent Fleet Intelligence</h2>
+                <p class="section-subtitle">The Site Brain</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <p
+                style="text-align: center; max-width: 900px; margin: 0 auto 40px; color: var(--text-secondary); font-size: 1.1rem;">
+                Beyond individual machine control—orchestrate entire fleets. Excavators and haul trucks learn to
+                collaborate, negotiate, and optimize project workflows through shared intelligence.
+            </p>
+
+            <div class="fleet-hero-image">
+                <img src="../assets/terra-sim/fleet-coordination.jpeg"
+                    alt="Multi-Agent Fleet Coordination at Construction Site">
+            </div>
+
+            <!-- Capability Columns -->
+            <div class="fleet-capabilities">
+                <div class="capability-column" data-card>
+                    <h3>Fleet Choreography</h3>
+                    <ul>
+                        <li>Dynamic truck positioning relative to excavator swing arcs</li>
+                        <li>Synchronized dual-lift operations for heavy loads</li>
+                        <li>Deadlock resolution in constrained spaces</li>
+                        <li>Learned negotiation logic for right-of-way</li>
+                    </ul>
+                </div>
+                <div class="capability-column" data-card>
+                    <h3>Site Orchestration</h3>
+                    <ul>
+                        <li>Mixed fleet interaction (autonomous + human vehicles)</li>
+                        <li>Real-time cycle optimization across zones</li>
+                        <li>Proactive re-routing during congestion</li>
+                        <li>VDA5050 interoperability with Fleet Management</li>
+                    </ul>
+                </div>
+                <div class="capability-column" data-card>
+                    <h3>Economic Optimization</h3>
+                    <ul>
+                        <li>Test fleet compositions before purchase</li>
+                        <li>Predict fuel burn per ton moved</li>
+                        <li>Simulate entire project timelines</li>
+                        <li>Optimal loader-to-truck ratios</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="fleet-hero-image" style="margin-top: 60px;">
+                <img src="../assets/terra-sim/excavator-twin.jpeg"
+                    alt="Excavator Digital Twin - Physical vs Holographic">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="terra-cta" data-scroll>
+        <div class="container">
+            <h2>Ready to Bridge the Reality Gap?</h2>
+            <p>Accelerate your autonomy roadmap by 12-18 months with physics-accurate simulation.</p>
+            <button class="cta-button contact-btn">
+                <span>Contact Us</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="../assets/logo.png" alt="CogniTron Logo" class="footer-logo">
+                <h3>CogniTron</h3>
+                <p class="footer-tagline">Manufacturing the Future</p>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Get in Touch</h4>
+                <p>Milpitas, CA , USA</p>
+                <button class="contact-footer-btn">Contact Us</button>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 CogniTron. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="contact-modal" id="contactModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Contact Us</h2>
+            <form class="contact-form" id="contactForm" method="POST">
+                <input type="hidden" name="access_key" value="b06ea6fa-bff0-42be-85ce-6d86024d32fa">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>
