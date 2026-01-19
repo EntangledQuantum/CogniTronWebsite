@@ -7,7 +7,7 @@
 }
 
 /* Override global card glow to use orange instead of green */
-.pipeline-section [data-card]::before,
+.autonomy-engine-section [data-card]::before,
 .cicd-section [data-card]::before,
 .sensor-section [data-card]::before,
 .multiagent-section [data-card]::before {
@@ -140,8 +140,28 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "q1 q2"
+        "q4 q3";
     gap: 80px;
     padding: 20px;
+}
+
+/* Position quadrants for clockwise flow: 1→2→3→4 */
+.quadrant-1 {
+    grid-area: q1;
+}
+
+.quadrant-2 {
+    grid-area: q2;
+}
+
+.quadrant-3 {
+    grid-area: q3;
+}
+
+.quadrant-4 {
+    grid-area: q4;
 }
 
 .flywheel-quadrant {
