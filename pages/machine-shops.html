@@ -21,31 +21,8 @@
     <!-- Dynamic Light Highlighter -->
     <div class="light-trail"></div>
 
-    <!-- Header Navigation -->
-    <header class="main-header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo-section">
-                    <a href="../index.html">
-                        <img src="../assets/logo.png" alt="CogniTron Logo" class="logo">
-                        <span class="company-name">CogniTron</span>
-                    </a>
-                </div>
-                <div class="nav-links">
-                    <div class="nav-item industries-dropdown">
-                        <span>Solutions</span>
-                        <div class="dropdown-content">
-                            <a href="digital-guardian.html" class="dropdown-item">Digital Guardian</a>
-                            <a href="terraforge.html" class="dropdown-item">TerraForge</a>
-                            <a href="machine-shops.html" class="dropdown-item active">Machine Shops</a>
-                        </div>
-                    </div>
-                    <a href="capabilities.html" class="nav-item">Capabilities</a>
-                    <a href="careers.html" class="nav-item">Careers</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!-- Header Navigation (loaded by header.js) -->
+    <div id="header-placeholder"></div>
 
     <!-- Hero Section -->
     <section class="machine-shop-hero">
@@ -192,44 +169,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <img src="../assets/logo.png" alt="CogniTron Logo" class="footer-logo">
-                <h3>CogniTron</h3>
-                <p class="footer-tagline">Manufacturing the Future</p>
-            </div>
-
-            <div class="footer-contact">
-                <h4>Get in Touch</h4>
-                <p>Milpitas, CA , USA</p>
-                <button class="contact-footer-btn">Contact Us</button>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 CogniTron. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Contact Modal -->
-    <div class="contact-modal" id="contactModal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Contact Us</h2>
-            <form class="contact-form" id="contactForm" method="POST">
-                <input type="hidden" name="access_key" value="b06ea6fa-bff0-42be-85ce-6d86024d32fa">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="text" name="subject" placeholder="Subject" required>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </div>
-    </div>
+    <!-- Footer (loaded by footer.js) -->
+    <div id="footer-placeholder"></div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/footer.js"></script>
     <script src="../scripts/script.js"></script>
 </body>
 
