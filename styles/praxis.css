@@ -1,0 +1,166 @@
+.praxis-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 110px;
+}
+
+.praxis-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(380px, 0.68fr) minmax(0, 1.32fr);
+    gap: 32px;
+    align-items: center;
+}
+
+.praxis-hero-copy .hero-title {
+    margin-bottom: 10px;
+}
+
+.praxis-hero-copy .hero-subtitle {
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.praxis-hero-copy .hero-tagline {
+    max-width: 620px;
+}
+
+.praxis-hero-visual,
+.praxis-architecture-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 255, 136, 0.18);
+    border-radius: 24px;
+    background: var(--gradient-2);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+}
+
+.praxis-hero-visual::after,
+.praxis-architecture-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(0, 255, 136, 0.15), transparent 34%),
+        radial-gradient(circle at 80% 75%, rgba(0, 204, 255, 0.14), transparent 34%);
+    pointer-events: none;
+}
+
+.praxis-hero-visual img,
+.praxis-architecture-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.praxis-statement {
+    max-width: 900px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.praxis-statement p {
+    color: var(--text-primary);
+    font-size: clamp(1.2rem, 3vw, 1.7rem);
+    line-height: 1.55;
+}
+
+.praxis-capability-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.praxis-capability-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+.praxis-capability-card p {
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+}
+
+.praxis-capability-card p:last-child {
+    margin-bottom: 0;
+}
+
+.capability-number {
+    color: rgba(0, 255, 136, 0.2);
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 18px;
+}
+
+.praxis-architecture-card {
+    max-width: 1540px;
+    margin: 0 auto;
+}
+
+.proof-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.proof-panel h2 {
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.proof-panel p:not(.eyebrow) {
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+}
+
+.praxis-video-frame {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 18px;
+}
+
+.praxis-video-slot-large {
+    min-height: 640px;
+    margin-top: 0;
+}
+
+.praxis-video-slot-large video {
+    min-height: 640px;
+}
+
+@media (max-width: 1024px) {
+    .praxis-hero-grid,
+    .praxis-capability-grid,
+    .proof-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .praxis-hero-copy {
+        text-align: center;
+    }
+
+    .praxis-hero-copy .hero-tagline {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .praxis-hero {
+        padding-top: 130px;
+    }
+
+    .praxis-video-slot-large,
+    .praxis-video-slot-large video {
+        min-height: 260px;
+    }
+}
