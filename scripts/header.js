@@ -46,6 +46,12 @@
                             <a href="${pagePrefix}machine-shops.html" class="dropdown-item${isDropdownActive('machine-shops.html')}">Machine Shops</a>
                         </div>
                     </div>
+                    <div class="nav-item industries-dropdown">
+                        <span>Products</span>
+                        <div class="dropdown-content">
+                            <a href="${pagePrefix}praxis.html" class="dropdown-item${isDropdownActive('praxis.html')}">Praxis</a>
+                        </div>
+                    </div>
                     <a href="${pagePrefix}capabilities.html" class="nav-item${isActive('capabilities.html')}">Capabilities</a>
                     <a href="${pagePrefix}careers.html" class="nav-item${isActive('careers.html')}">Careers</a>
                 </div>

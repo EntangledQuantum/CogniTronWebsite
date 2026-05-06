@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praxis - Differentiable Physics for Manufacturing Intelligence | CogniTron</title>
+    <meta name="description"
+        content="Praxis is Cognitron's differentiable physics engine for manufacturing, connecting first-principles simulation to real-time optimization.">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/praxis.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Dynamic Light Highlighter -->
+    <div class="light-trail"></div>
+
+    <!-- Header Navigation (loaded by header.js) -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="praxis-hero">
+        <div class="container">
+            <div class="praxis-hero-grid">
+                <div class="praxis-hero-copy">
+                    <p class="eyebrow">Cognitron Praxis</p>
+                    <h1 class="hero-title glitch" data-text="Praxis">Praxis</h1>
+                    <h2 class="hero-subtitle">Differentiable Physics for Manufacturing Intelligence</h2>
+                    <p class="hero-tagline">Every factory is a physics problem. We make it solvable.</p>
+                    <button class="cta-button contact-btn">
+                        <span>Request Demo</span>
+                        <div class="button-glow"></div>
+                    </button>
+                </div>
+                <div class="praxis-hero-visual">
+                    <img src="../assets/praxis/praxis_platform_image.png"
+                        alt="Praxis differentiable physics platform architecture">
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll Down</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Overview -->
+    <section class="praxis-overview-section" data-scroll>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">From Target Outcome to Optimal Process</h2>
+                <p class="section-subtitle">Praxis connects first-principles simulation to real-time optimization and
+                    deploys it where decisions are actually made.</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="praxis-statement" data-card>
+                <p>At its core, Praxis turns manufacturing from a forward problem - "run these settings and see what
+                    happens" - into an inverse problem: "tell me what settings produce this result."</p>
+            </div>
+
+            <div class="praxis-capability-grid">
+                <div class="praxis-capability-card" data-card>
+                    <div class="capability-number">01</div>
+                    <h3>Differentiable Simulation</h3>
+                    <p>Praxis wraps physics solvers - thermal, structural, fluid, and contact mechanics - in a fully
+                        differentiable computational graph, so every simulation output carries gradients back to material
+                        properties, geometry parameters, and process settings.</p>
+                    <p>It builds on NVIDIA Warp and JAX-based solvers with a composable kernel architecture for chaining
+                        heterogeneous physics domains while preserving gradient flow end-to-end.</p>
+                </div>
+
+                <div class="praxis-capability-card" data-card>
+                    <div class="capability-number">02</div>
+                    <h3>Neural Surrogate Models</h3>
+                    <p>For problems where even differentiable simulation is too slow for real-time use, Praxis trains
+                        neural operator surrogates that learn the input-output mapping of the physics solver at 1000x
+                        speedup.</p>
+                    <p>These surrogates carry calibrated uncertainty estimates via conformal prediction and can be
+                        exported as ONNX models for WebGPU in a browser or NVIDIA Jetson at the factory edge.</p>
+                </div>
+
+                <div class="praxis-capability-card" data-card>
+                    <div class="capability-number">03</div>
+                    <h3>Inverse Design & Process Optimization</h3>
+                    <p>Given a target outcome - a thermal profile, structural stiffness, or defect-free weld - Praxis
+                        backpropagates through the surrogate or full solver to find the process parameters or geometry
+                        that achieve it.</p>
+                    <p>Manufacturing constraints such as toolpath feasibility, material availability, and machine limits
+                        are embedded directly into the optimization loop.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Architecture -->
+    <section class="praxis-architecture-section" data-scroll>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Praxis Platform</h2>
+                <p class="section-subtitle">Differentiable simulation, neural surrogates, and inverse design in one
+                    optimization loop.</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="praxis-architecture-card" data-card>
+                <img src="../assets/praxis/praxis_platform_image.png"
+                    alt="Praxis platform diagram showing simulation, neural surrogates, and inverse design">
+            </div>
+        </div>
+    </section>
+
+    <!-- Proof and Direction -->
+    <section class="praxis-proof-section" data-scroll>
+        <div class="container">
+            <div class="proof-grid">
+                <div class="proof-panel" data-card>
+                    <p class="eyebrow">Validated Proof Points</p>
+                    <h2>Physics-aware control in production-facing problems</h2>
+                    <p>Praxis has been deployed for an unnamed company for automated robot path generation that adapts as
+                        shoe geometry changes.</p>
+                    <p>Its computer vision pipeline also monitors SOP compliance at a Stellantis engine assembly plant.
+                    </p>
+                </div>
+
+                <div class="proof-panel" data-card>
+                    <p class="eyebrow">Where Praxis Is Going</p>
+                    <h2>A browser-accessible manufacturing intelligence layer</h2>
+                    <p>Engineers will upload a CAD geometry or define a process, Praxis will run the physics, train a
+                        surrogate, and deliver an optimized design or recipe.</p>
+                    <p>The first public-facing demo is an EV battery cold-plate topology optimizer running entirely in
+                        the browser via WebGPU-accelerated neural surrogates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Preview -->
+    <section class="praxis-video-section" data-scroll>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Praxis Demo Video</h2>
+                <p class="section-subtitle">A video can be added later without changing this page.</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="praxis-video-frame" data-card>
+                <div class="praxis-video-slot praxis-video-slot-large" data-praxis-video
+                    data-video-candidates='["../assets/praxis/praxis.mp4","../assets/praxis/praxis-overview.mp4","../assets/praxis/praxis-demo.mp4","../assets/praxis/platform-demo.mp4"]'>
+                    <div class="video-coming-soon">
+                        <span>Video Coming Soon</span>
+                        <p>Add praxis.mp4, praxis-overview.mp4, praxis-demo.mp4, or platform-demo.mp4 and this page will
+                            load it automatically.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (loaded by footer.js) -->
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/footer.js"></script>
+    <script src="../scripts/praxis-video.js"></script>
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>
